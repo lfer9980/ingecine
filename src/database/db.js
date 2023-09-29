@@ -1,8 +1,8 @@
 import * as fs from 'fs';
-
+const path = "./src/database/data.json";
 class Database {
-    constructor() {
-        this.filename = './src/database/data.json';
+    constructor(path) {
+        this.filename = path;
     }
 
     addMovie(movie) {
@@ -35,5 +35,5 @@ class Database {
     }
 }
 
-const Db = new Database();
+const Db = new Database(path);
 export default Db;
